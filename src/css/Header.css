@@ -1,0 +1,339 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1c1e21;
+}
+
+
+.header {
+    width: 100%;
+    height: 60px;
+    background-color: #2a2d31;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position:fixed;
+    top:0;
+    z-index: 100;
+}
+
+/* Header Search */
+.header_search{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 23%;
+    height: 100%;
+}
+
+.search_message {
+    height: 150%;
+    width: 35%;
+    margin-bottom:10px;
+}
+
+.header_search img {
+    width: 40px;
+    height:40px;
+    cursor: pointer;
+}
+
+.header_search input, .header_user .show input {
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    width: 250px;
+    padding-left: 20px;
+    font-size: 16px;
+    background-color: #393c41;
+    color: rgba(255, 255, 255, 0.801);
+    transition: 0.5s;
+    margin-left: 10px;
+    
+
+}
+.header_search input:focus, .header_user .show input:focus {
+    outline: none;
+    width: 260px;
+}
+
+.option_btn {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    color: rgba(255, 255, 255, 0.801);
+    cursor: pointer;
+}
+.option_btn:hover, .username:hover{background-color: #393c41;}
+
+/* Header nav */
+.header_nav {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    margin-left: 100px;
+}
+
+.header_nav .nav_link, .active {
+    margin-top: 2px;
+    width: 100px;
+    background-color: transparent;
+    height: 90%;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.801);;
+}
+
+.header_nav .nav_link:hover {
+    background-color: #6c6f7462;
+    border-radius: 10px;
+}
+
+.header_nav .active {
+    color: #3672f5;
+    border-bottom:4px solid #3672f5 ;
+}
+
+/* Header User */
+.header_user{
+    display: flex;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+    justify-content: flex-end;
+}
+
+.header_user .username {
+    width: 100px;
+    height: 40px;
+    border-radius: 50px;
+    margin-right: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.801);
+    font-weight: 600;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+.header_user .username img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.header_user .option{
+    width: 40px;
+    height: 40px;
+    background-color: #393c41;
+    margin-right: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header_user .option:hover {background-color: #5a5e64;}
+
+.header_user .hidden {
+    display: none;
+}
+
+.show::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track:hover {
+    background-color: #2a2d31;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {  
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {  
+    background: rgba(255, 255, 255, 0.425);
+}
+
+
+
+.header_user .show {
+    color: rgba(255, 255, 255, 0.801);
+    font-weight: 600;
+    font-size: 15px;
+    font-family: sans-serif;
+    position: absolute;
+    top: 50px;
+    right:10px;
+    width: 370px;
+    height: 550px;
+    background-color: #2a2d31;
+    border-radius: 10px;
+    padding-left: 10px;
+    display:flex;
+    flex-direction:column;
+    overflow-y: scroll;
+}
+
+/* The sub option part of the code*/
+.show .sub-option, .show .messages, .show .notifications, .profil_button, .avis_button {
+    padding: 5px;
+    width: 340px;
+    height: 75px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+    font-family: sans-serif;
+    position: relative;
+}
+
+
+.show .sub-option:nth-child(4)::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    width:100%;
+    border-bottom: 0.2px solid rgba(255, 255, 255, 0.329);
+}
+
+.show .sub-option:nth-child(5){
+    margin-top: 25px;
+}
+
+.sub-option .pic, .messages .pic, .notifications .pic, .profil_button .pic, .avis_button .pic {
+    margin-bottom: 0px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #393c41;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-left: 10px;
+    
+}
+
+.sub-option .pic, .avis_button .pic {
+    width: 40px;
+    height: 40px;
+}
+.sub-option:hover, .messages:hover, .profil_button:hover, .avis_button:hover {background-color: #5a5e64;}
+
+.sub-option p, .messages p, .avis_button p {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.616);
+    line-height: 30px;
+    width: 300px;
+}
+
+.sub-option p, .avis_button p {
+    line-height: 20px;
+}
+.sub-option span, .messages span, .avis_button span {
+    font-size: 13px;
+    font-weight: 400; 
+}
+
+.show h4 {
+    margin-top: 10px;
+}
+
+.show .notifications p {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.616);
+    width: 300px;
+    margin-top: 0;
+}
+
+.notifications span {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.notifications b {
+    font-size: 13px;
+    color:#3672f5;
+}
+
+.profil_button {
+    margin-top: 15px;
+    height: 60px;
+}
+
+.profil_button::after, .avis_button::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    width:100%;
+    border-bottom: 0.2px solid rgba(255, 255, 255, 0.329);
+}
+
+.profil_button p {
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.616);
+    line-height: 25px;
+    width: 300px;
+}
+
+.profil_button span {
+    font-weight: 400;
+}
+
+.avis_button {
+    margin-top: 20px;
+    height: 65px;
+}
+
+.my_option {
+    color: rgba(255, 255, 255, 0.801);
+    font-weight: 600;
+    font-size: 15px;
+    font-family: sans-serif;
+    border-radius: 10px;
+    display:flex;
+    flex-direction:column;
+    margin-top: 20px;
+}
+
+.my_option .sub-option {
+    height: 55px;
+    display: flex;
+    align-items: center;
+}
+
+.my_option .sub-option:nth-child(4)::after {content: none;}
+
+/* The info option */
+.info {
+    font-size: 13px;
+    padding-left: 10px;
+    color: rgba(255, 255, 255, 0.801); 
+}
+
+.info p a {
+    text-decoration: none;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.801); 
+}
+
+.info p a:hover {
+    text-decoration: underline;
+}
+
